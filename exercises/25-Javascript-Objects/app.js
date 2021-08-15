@@ -16,6 +16,7 @@ var person2 = {
     significant_other: person
 };
 
+
 var family = {
     lastname: "Doe",
     members: [person, person2]   //Array of objects, don't forget to add Jimmy
@@ -27,11 +28,35 @@ function addAllFamilyLuckyNumbers(anArray){
 
   //To-Do: loop and add; consider nested loops
   //Hint: use the anArray variable to get all of the lucky numbers
-  
+  for (let i=0; i<anArray.length;i++){
+
+
+    const member=anArray[i]
+
+    for (let j=0;j<member.lucky_numbers.length;j++){
+        sumOfAllLuckyNumbers=sumOfAllLuckyNumbers + member.lucky_numbers[j]
+    }
+
+  }
+// [ 7, 11, 13, 17], 
+
   return sumOfAllLuckyNumbers;
 }
 
 //Enter all your code here:
+
+//1
+person.lucky_numbers[3]=33
+//2
+var person3 = {
+    name: "Jimmy",
+    lastname: "Doe",
+    age: 13,
+    gender: "male",
+    lucky_numbers: [ 1, 2, 3, 4],
+    significant_other:null }
+
+family.members.push(person3)
 
 
 //Do not make changes below:
